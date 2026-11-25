@@ -35,11 +35,13 @@ EquivalenceCheck
 다르면 이런 메시지로 실패합니다.
 
 ```
-불일치 12건 / 전체 192조합 (앞 3건만 표시)
-  #17 status=SUBMITTED, step=2, role=APPROVER, delegated=false
-      reference = [APPROVE, RETURN, REJECT]
-      candidate = [APPROVE, RETURN]
-  ...
+불일치 2건 / 전체 192조합
+  #82 status=IN_REVIEW, step=2, role=REVIEWER, delegated=true
+      reference = [APPROVE, RETURN]
+      candidate = []
+  #90 status=IN_REVIEW, step=3, role=REVIEWER, delegated=true
+      reference = [APPROVE, RETURN]
+      candidate = []
 ```
 
 - 예외도 결과로 비교합니다. 한쪽만 예외를 던지거나 예외 종류가 다르면 불일치입니다.
